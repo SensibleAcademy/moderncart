@@ -50,13 +50,15 @@ body
 {
     color:blue;
     font-size: 80px;
-    text-shadow: 3px 3px 10px black;
+    text-shadow: 3px 3px 5px black;
+    margin:-2px;
 }
 #title h3 
 {
     letter-spacing: 5px;
     word-spacing: 25px;
     color:darkslategrey;
+    margin-top: -15px ;
 }
 #leftlogo img,#rightlogo img 
 {
@@ -76,4 +78,63 @@ body
 {
     min-height: 450px;
 }
+a 
+{
+    text-decoration: none;
+}
+#myForm 
+{
+    padding: 20px;
+    width:500px;
+    background-color: #00214E;
+    color:yellow;
+    margin: 20px auto;
+    font-size: 20px;
+    min-height: 250px;
+}
+#myForm label 
+{
+    display: block;
+    margin: 5px 0px;
+}
+#myForm input[type="text"],#myForm input[type="password"],#myForm textarea,#myForm input[type="date"],#myForm select     
+{
+  width: 90%;
+  font-size: 20px;
+  padding: 2px;
+}
+#formButtons input 
+{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    background-color: yellow;
+    color: black;
+    margin: 10px;
+    border:2px solid black;
+    border-radius: 10px;    
+}
+#resmessage 
+{
+    background-color: white;
+    color:red;
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+#userinfo 
+{
+    background-color: #00214E;
+    color:white; 
+    width: 300px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px auto;
+    border-radius: 10px;
 
+}
+#userinfo  a 
+{
+    color:yellow;
+}

@@ -4,20 +4,31 @@
 <div id="container"> 
 
 <div id="myForm">
-<form method="get" action="insertCustomer.php">
-<label>Enter your name</label>
-<input type="text" name="txtName" />
-<label>Enter your Email id</label>
-<input type="text" name="txtEmail" />
-<label>Enter your Mobile No</label>
-<input type="text" name="txtMobile" />
+  <?php 
+   if(isset($_REQUEST['resmsg']))
+   {
+     echo("<div id='resmessage'>");
+      if($_REQUEST['resmsg']==1)
+      {
+        echo("Invalid User Name");
+      }
+      else if($_REQUEST['resmsg']==2)
+      {
+        echo("Invalid Password");
+      }
+     
+     echo("</div>");
+   }
+  ?>
+<form method="get" action="checkLogin.php">
 <label>Enter your user name</label>
 <input type="text" name="txtUser" />
 <label>Enter your password</label>
 <input type="password" name="txtPassword" />
-
+<div id='formButtons'>
 <input type="submit" value="Ok" />
 <input type="reset" value="Cancel" />
+</div>
 </form>
 
 
