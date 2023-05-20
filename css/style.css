@@ -97,7 +97,7 @@ a
     display: block;
     margin: 5px 0px;
 }
-#myForm input[type="text"],#myForm input[type="password"],#myForm textarea,#myForm input[type="date"],#myForm select     
+#myForm input[type="text"],#myForm input[type="password"],#myForm textarea,#myForm input[type="date"],#myForm select ,#myForm input[type="file"]    
 {
   width: 90%;
   font-size: 20px;
@@ -138,3 +138,49 @@ a
 {
     color:yellow;
 }
+#adminArea 
+{
+    background-color: #00224F;
+    width: 100%;
+    height: 100%;
+}
+#leftAdminArea 
+{
+    background-color: #00224F;
+    width: 150px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+#rightAdminArea 
+{
+    background-color: white;
+    width: 805px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+#adminMenu 
+{
+    list-style: none;
+    margin: 0px;
+    padding: 5px;
+}
+#adminMenu li 
+{
+     color:yellow;
+     height: 25px;
+}
+#adminMenu li a 
+{
+    color:white;
+    line-height: 25px;
+    display: block;
+} 
+#adminMenu li a:hover 
+{
+   background-color: aqua;
+   color:black;
+   padding-left:10px;
+}
+
