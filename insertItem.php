@@ -6,9 +6,11 @@
   $d=$_REQUEST["txtDiscount"];
   $e=$_REQUEST["txtDetail"];
 
-  $img=$_FILES["flImage"]["name"];
+  $img=$_FILES["flImage"];
 
-  $imgarray=explode(".",$img);
+  $imgn=$_FILES["flImage"]["name"];
+
+  $imgarray=explode(".",$imgn);
 
 
   $imgname=$imgarray[0]."_".time() .".".  $imgarray[1];
