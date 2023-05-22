@@ -1,6 +1,6 @@
 <ul id='adminMenu'>
  <li>  <a href="categoryForm.php">Create Category </a>  </li>   
- <li>  <a href="">Create Item </a>  </li>   
+ <li>  <a href="itemForm.php">Create Item </a>  </li>   
  <li>  <a href="">Create News </a>  </li>   
  <li>  <a href="">Create Offers </a>  </li>   
  <li>  <a href="">Inbox </a>  </li>   
