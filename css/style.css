@@ -233,3 +233,41 @@ a
     display: block;
     background-color: aliceblue;
 }
+
+#cartinfo
+{
+    background-color:#00224F;
+    color:white;
+    padding: 10px;
+    border:5px solid red;
+    width: 800px;
+    min-height: 300px;
+    margin: 20px auto;
+}
+#cartinfo table
+{
+  color:white;
+  width: 90%;
+   margin: 10px auto;
+   border-collapse: collapse;
+   border-color:white; 
+}
+#cartinfo table th ,#cartinfo table td
+{
+   padding: 3px;
+}
+
+#placeOrder
+{
+    display: block;
+    height: 50px;
+    width: 200px;
+    color:black;
+    background-color: greenyellow;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    border: 10px solid #00224F;
+    border-radius: 20px 0px;
+}

@@ -35,7 +35,7 @@
 </div><!--end of categoryContainer-->
 <div id="itemContainer">
   <?php 
-      $rsItem=mysqli_query($con,"select * from item_info  order by item_name");
+      $rsItem=mysqli_query($con,"select * from item_info where cat_parent_id='$prid'  order by item_name");
       while($row=mysqli_fetch_array($rsItem))
         {
            echo("<div class='item'>");
