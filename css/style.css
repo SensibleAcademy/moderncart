@@ -256,6 +256,10 @@ a
 {
    padding: 3px;
 }
+#cartinfo a
+{
+   color:yellow;
+}
 
 #placeOrder
 {
