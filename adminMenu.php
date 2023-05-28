@@ -2,7 +2,7 @@
  <li>  <a href="categoryForm.php">Create Category </a>  </li>   
  <li>  <a href="itemForm.php">Create Item </a>  </li>   
  <li>  <a href="">Create News </a>  </li>   
- <li>  <a href="">Create Offers </a>  </li>   
+ <li>  <a href="offerForm.php">Create Offers </a>  </li>   
  <li>  <a href="">Inbox </a>  </li>   
  <li>  <a href="">Compose </a>  </li>   
  <li>Reports </li>

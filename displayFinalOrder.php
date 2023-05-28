@@ -5,9 +5,18 @@
 
    <div id='cartinfo'>
     <?php 
+      $odid=$_REQUEST["odid"];
       include("dbconnect.php");
       $usr=$_SESSION["uname"];
-      $sql="select ci.cart_id,ci.item_rate,ci.item_quantity,ii.item_name,ii.image_path from cart_info as ci,item_info as ii where ci.item_id=ii.item_id  and user_name='$usr'";
+
+      $rsMain=mysqli_query($con,"select * from order_main where order_id='$odid'");
+      $row=mysqli_fetch_array($rsMain);
+      echo("Bill No : ".$row["order_id"] ."<br>");
+      echo("Order Date : ".$row["order_date"] ."<br>");
+      echo("Shipping Address : ".$row["shipping_address"] ."<br>");
+      echo("Total Amount : ".$row["total_amount"] ."<br>");
+
+      $sql="select ci.order_detail_id,ci.item_rate,ci.item_quantity,ii.item_name,ii.image_path from order_detail as ci,item_info as ii where ci.order_main_id='$odid' and ci.item_id=ii.item_id ";
       $rscart=mysqli_query($con,$sql);
       echo("<table border='2'>");
       echo("<tr><th>Sl.No. </th><th>Item Name </th><th>Image </th><th> Rate </th><th>Quantity </th><th> Amount</th><th> Status</th> </tr>");
@@ -42,7 +51,8 @@
         echo("</td>");
 
         echo("<td>");
-        $id=$row["cart_id"];
+
+        $id=0;
         
         echo("<a href='deleteCart.php?cid=$id'>Delete</a>");
         echo("</td>");
@@ -57,7 +67,7 @@
 
     ?>
    </div><!--end of cartinfo-->
-   <a href='addressFormForOrder.php?amnt=<?=$total?>' id='placeOrder'>Place Order</a>
+   <a href='printOrder.php?amnt=<?=$total?>' id='placeOrder'>Print Bill</a>
 
 </div><!--end of container--> 
 
