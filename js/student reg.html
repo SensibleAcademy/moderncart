@@ -3,7 +3,15 @@
   <script>
   function checkValid()
   {
-      if(document.f1.txtName.value=="")
+      em=document.f1.txtEmail.value;
+     // alert(em.indexOf("@"));
+
+     if(em.indexOf("@")==-1 || em.indexOf("@")!=em.lastIndexOf("@"))
+     {
+       alert("Invalid Email Id ");
+       document.f1.txtEmail.focus();
+     }
+      else if(document.f1.txtName.value=="")
       {
          alert("Name Can not be empty");
          document.f1.txtName.focus();
@@ -14,11 +22,19 @@
          document.f1.txtPass.focus();
       }
 
-      else if(document.f1.txtPass.value=="")
+      else if(document.f1.txtPass.value.length<6)
       {
-         alert("Password Can not be empty");
+         alert("Password should have minimum 6 characters");
          document.f1.txtPass.focus();
       }
+
+
+      else if(isNaN(document.f1.txtPin.value))
+      {
+         alert("Pin no can accept only numeric data");
+         document.f1.txtPin.focus();
+      }
+
 
 
       else 
@@ -43,7 +59,9 @@
 <form action="second.html"  method="get" name="f1">
 
 <table>
-<tr> <td> Enter your name : </td> <td> 
+  <tr> <td> Enter Email Id :</td> <td>  <input type="text" name="txtEmail"  </td> </tr>
+
+  <tr> <td> Enter your name : </td> <td> 
 
 <input type="text" name="txtName" value="raju" id="txtName"> *
 
@@ -53,7 +71,7 @@
 
 
 </td> </tr>
-<tr> <td> Enter your father name :</td> <td>  <input type="text" name="txtFname" placeholder="type father name here"> </td> </tr>
+<tr> <td> Enter pin no :</td> <td>  <input type="text" name="txtPin"  </td> </tr>
 
 <tr> <td>Enter your password </td> <td> <input type="password" name="txtPass"> * </td> </tr>
 
