@@ -1,0 +1,123 @@
+<html>
+<head>
+  <script>
+  function checkValid()
+  {
+      if(document.f1.txtName.value=="")
+      {
+         alert("Name Can not be empty");
+         document.f1.txtName.focus();
+      }
+      else if(document.f1.txtPass.value=="")
+      {
+         alert("Password Can not be empty");
+         document.f1.txtPass.focus();
+      }
+
+      else if(document.f1.txtPass.value=="")
+      {
+         alert("Password Can not be empty");
+         document.f1.txtPass.focus();
+      }
+
+
+      else 
+      {
+        document.f1.submit();
+      }
+
+
+  }
+
+
+  </script>
+ 
+
+
+</head>
+<body>
+<h1 id="myhead">मेरा भारत महान</h1>
+
+<p> this is sensible </p>
+
+<form action="second.html"  method="get" name="f1">
+
+<table>
+<tr> <td> Enter your name : </td> <td> 
+
+<input type="text" name="txtName" value="raju" id="txtName"> *
+
+<input type="hidden" name="txtSurname" value="sharma"> 
+
+
+
+
+</td> </tr>
+<tr> <td> Enter your father name :</td> <td>  <input type="text" name="txtFname" placeholder="type father name here"> </td> </tr>
+
+<tr> <td>Enter your password </td> <td> <input type="password" name="txtPass"> * </td> </tr>
+
+<tr> <td>Choose your gender </td> <td>  
+<input type="radio" name="rdGender" value="m" checked> Male 
+<input type="radio" name="rdGender" value="f"> Female 
+
+</td> </tr>
+
+
+<tr> <td>Choose your hobbies :</td> <td> 
+<input type="checkbox" name="chkHobby" value="cri"> Cricket 
+<input type="checkbox" name="chkHobby" value="foot" checked> Football
+<input type="checkbox" name="chkHobby" value="bad" checked> Badminton
+<input type="checkbox" name="chkHobby" value="music"> Music
+
+ </td> </tr>
+
+
+<tr> <td> Choose any course</td> <td>  
+<select name="cmbCourse">
+<option value="1"> Java </option>
+<option value="2"> C lang </option>
+<option> C++ </option>
+<option selected> Dot Net </option>
+<option> PHP </option>
+
+</select>
+
+
+</td> </tr>
+
+<tr> <td> Chose Your photo</td> <td> 
+<input type="file" name="flPhoto"> 
+ </td> </tr>
+
+
+<tr> <td>Choose your DOB </td> <td>  <input type="date" name="dtDob"> </td> </tr>
+
+<tr> <td>Enter your address </td> <td> 
+<textarea name="txtAddress" rows="5" cols="40">Ganj Para, 
+near shani mandir,
+durg</textarea>
+
+  </td> </tr>
+
+
+<tr> <td> </td> <td>  </td> </tr>
+
+<tr> <td> <input type="button" value="save data" onclick="checkValid();"> </td> <td>  <input type="reset" value="cancel"> 
+
+<input type="button" value="delete data">
+
+</td> </tr>
+
+</table>
+
+
+
+
+
+</form>
+
+
+
+</body>
+</html>
