@@ -67,9 +67,15 @@
 
 </ul>    
 
+<input type="button" value="Stop game" onclick="stopAll();">
+
 <script>
+    var tm;
   function selectDeselect(chk)
   {
+
+    
+
     chkitems=document.getElementsByClassName("chkEmail");
     if(chk.checked==true)
     {
@@ -81,6 +87,33 @@
         for(i=0;i<=chkitems.length-1;i++)
          chkitems.item(i).checked=false;
     }
+    
+   //  
+
+   //setTimeout(function(){ welcome(); },4000);
+
+   c=0;
+   tm=setInterval(function(){ gameStart(); },1000);
+
+
+
+
+  }
+  function stopAll()
+  {
+      clearInterval(tm);
+
+      //clearTimeout(tm);
+      //
+  }
+  var c=0;
+  function gameStart()
+  {
+     
+
+     c=c+1;
+
+     document.getElementById("fourth").innerHTML="Sensible Academy :" + c;
   }
 
 </script>
