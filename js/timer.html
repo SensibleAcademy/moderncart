@@ -1,0 +1,60 @@
+<html>
+    <head>
+<script>
+var mn=4;
+var sc=59;
+var tm;
+function runTimer()
+{
+
+   sc=sc-1;
+   if(sc==0 && mn==0)
+   {
+     clearInterval(tm);
+   }
+   if(sc<0)
+     {
+        sc=59;
+        mn=mn-1;
+     }
+
+
+  document.getElementById("myTimer").innerHTML=mn + " : " + sc;
+}
+function gameStart()
+{
+    tm=setInterval(function(){runTimer();},10);
+ 
+}
+function gameStop()
+{
+  clearInterval(tm);
+}
+
+</script>
+<style>
+    #myTimer 
+    {
+        width:150px;
+        height:100px;
+        background-color:#FF0000;
+        color:yellow;
+        font-size:40px;
+        text-align:center;
+        line-height:100px;
+        border:10px solid black;
+        position:absolute;
+        right:100px;
+        top:100px;
+    }
+</style>
+</head>
+
+ <body>
+    <div id="myTimer"></div>
+    <input type="button" value="game Start" onclick="gameStart();">
+    <input type="button" value="game Stop" onclick="gameStop();">
+</body>
+
+
+</html>
