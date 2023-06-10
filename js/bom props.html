@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>
+            pk 
+        </title>    
+<script>
+    var win;
+    var cnt=0;
+function display()
+{
+    cnt++;
+    //alert(window.innerWidth + " , " + window.innerHeight);      
+    //alert(""+window.pageYOffset);
+  //  window.scrollBy(100,300);
+//  window.scrollTo(0,300);
+//window.moveTo(50,50);
+
+  //win=window.open("chatstart.php?mydata="+ x,"ram"+cnt,"width=200,height=100");
+  window.print();
+}
+function show()
+{
+     win.close();
+}
+function displayScreen()
+{
+//    var x=screen.width;
+  //  var y=screen.height;
+
+    var x=screen.availWidth;
+  var y=screen.availHeight;
+
+  
+    //alert(x + " , " + y);
+   // alert(screen.colorDepth);
+
+
+}
+
+
+
+</script>
+    </head>    
+    <body >
+
+        <input type="button" value="Back" onclick="history.back();">         
+        <input type="button" value="Next" onclick="history.forward();"> 
+
+        <marquee direction="up" height="150" onmouseover="this.stop();" onmouseout="this.start();">
+            <ul>
+<li> <a href="sample.html"> News 1 </a></li>
+<li> <a href="#"> News 2 </a></li>
+<li> <a href="#"> News 3 </a></li>
+<li> <a href="#"> Exam Dates Detail </a></li>
+<li> <a href="#"> News 5 </a></li>
+<li> <a href="#"> News 6 </a></li>
+  </ul>
+        </marquee>
+<input type="button" value="window testing" 
+onclick="display();">
+
+<script>
+    document.write("<h1>Sensible</h1>");
+
+    document.cookie="senusername='piyush';expires=Mon, 18 Jun 2023;path=/";
+
+    var x=document.cookie;
+alert(x);
+
+
+
+</script>
+
+<input type="button" value="window testing close" 
+onclick="show();">
+
+<input type="button" value="Screen Info" onclick="displayScreen();">
+
+<h1>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum animi repellendus excepturi mollitia consequuntur. Mollitia magnam magni fugit laborum maxime id sit! Assumenda voluptatum nesciunt dolorum accusamus soluta perferendis eum.
+</h1>
+<h1>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum animi repellendus excepturi mollitia consequuntur. Mollitia magnam magni fugit laborum maxime id sit! Assumenda voluptatum nesciunt dolorum accusamus soluta perferendis eum.
+</h1>
+<h1>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum animi repellendus excepturi mollitia consequuntur. Mollitia magnam magni fugit laborum maxime id sit! Assumenda voluptatum nesciunt dolorum accusamus soluta perferendis eum.
+</h1>
+<h1>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum animi repellendus excepturi mollitia consequuntur. Mollitia magnam magni fugit laborum maxime id sit! Assumenda voluptatum nesciunt dolorum accusamus soluta perferendis eum.
+</h1>
+
+    </body>
+</html>

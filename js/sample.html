@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+       <style>
+     body 
+     {
+        padding:20px; 
+     }
+     #myDiv 
+     {
+        position: absolute;
+        right:100px;
+        top:100px;
+        border:2px solid black;
+        width: 200px;
+        height: 100px;
+        font-size: 40px;
+        text-align: center;
+        line-height: 100px;
+     }
+     </style>
+     <script>
+      var cnt=0;
+      function increase()
+      {
+         cnt=cnt+1;
+         document.getElementById("myDiv").innerHTML = cnt;
+      }
+     </script>       </head>    
+    <body>
+<a href="second.html">        
+Go to Second page
+</a>
+        <div id="myDiv">
+            0
+         </div>  
+        
+         <input type="button" value="Back" onclick="goPrevPage();">         
+<input type="button" value="Next" onclick="goNextPage();"> 
+<script>
+ function goNextPage()
+ {
+    //alert(location.href);
+    //location.href="second.html";
+
+    location.replace("second.html");
+ }
+ function goPrevPage()
+ {
+  
+ }
+</script>   
+
+    </body>
+</html>

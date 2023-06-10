@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <style>
+       <style>
+     body 
+     {
+        padding:20px; 
+     }
+     #myDiv 
+     {
+        position: absolute;
+        right:100px;
+        top:100px;
+        border:2px solid black;
+        width: 200px;
+        height: 100px;
+        font-size: 40px;
+        text-align: center;
+        line-height: 100px;
+     }
+     #firstDiv
+     {
+        position: absolute;
+        left:100px;
+        top:100px;
+        border:2px solid black;
+        width: 200px;
+        height: 100px;
+        font-size: 40px;
+        text-align: center;
+        line-height: 100px;
+     }
+
+</style>
+     <script>
+      var cnt=0;
+      function increase()
+      {
+         cnt=cnt+1;
+         document.getElementById("myDiv").innerHTML = cnt;
+      }
+      function showData(ev)
+      {
+         
+         //x=ev.altKey;
+         //x=ev.ctrlKey;
+         //x=ev.shiftKey;
+         //x=ev.button;
+         
+         //x=ev.clientX;
+         //y=ev.clientY;
+         
+        //x=ev.screenX;
+        //y=ev.screenY;
+
+
+//           x=ev.offsetX;
+  //       y=ev.offsetY;
+
+
+       //  x=ev.x;
+       //  y=ev.y;
+
+       //x=ev.pageX;
+       //y=ev.pageY;
+
+       if(ev.which>=48 && ev.which<=57)
+         {
+
+         }
+       else 
+       {  
+        //ev.preventDefault();    
+       } 
+       x=ev.keyCode;
+         document.getElementById("myDiv").innerHTML = x ;
+
+      }
+     </script>       </head>    
+    <body>
+        
+
+   <div id="firstDiv" >
+First Div
+   </div>   
+
+   <textarea rows="5" onkeydown="showData(event)"></textarea>
+
+        <div id="myDiv">
+            0
+         </div>  
+        
+
+    </body>
+</html>

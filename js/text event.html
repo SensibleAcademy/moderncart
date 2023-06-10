@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <style>
+     body 
+     {
+        padding:20px; 
+     }
+     #myDiv 
+     {
+        position: absolute;
+        right:100px;
+        top:100px;
+        border:2px solid black;
+        width: 200px;
+        height: 100px;
+        font-size: 40px;
+        text-align: center;
+        line-height: 100px;
+     }
+     </style>
+     <script>
+      var cnt=0;
+      function increase()
+      {
+         cnt=cnt+1;
+         document.getElementById("myDiv").innerHTML = cnt;
+      }
+     </script>   
+    </head>    
+    <body>
+        
+        1. <input type="text"> <br> <br>
+        2. <input type="text"> <br> <br>
+        3. <input type="text" value="ram" onkeydown="increase();"> <br> <br>
+        4. <input type="text"> <br> <br>
+        5. <input type="text"> <br> <br>
+
+        <div id="myDiv">
+           0
+        </div>    
+
+    </body>
+</html>
