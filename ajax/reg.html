@@ -1,0 +1,151 @@
+<html>
+<head>
+<title>
+Sensible Academy, Vocational training bhilai, idustrial training bhilai, 
+</title>
+
+<meta name="keywords" content="java coaching bhilai, java tution bhilai,">
+
+
+<meta name="description" content="dot net course near me, c and c++ class">
+
+<meta charset="utf-8">
+
+<script>
+function checkEmail()
+{
+   txt=document.getElementById("txtEmail").value;
+   if(txt.length>3)
+   {
+   sp=document.getElementById("errEmail");
+   var xml=new XMLHttpRequest();
+   
+   xml.onreadystatechange=function()
+   {
+      if(xml.readyState==4 && xml.status==200)
+      {
+        x=xml.responseText;
+        sp.innerHTML=xml.responseText;
+      }
+   }
+   //xml.open("POST","emailCheck.php?mid="+txt,true);
+   //xml.send();
+   xml.open("POST","emailCheck.php",true);
+   xml.setRequestHeader("content-type","application/x-www-form-urlencoded");
+   //multipart/form-data
+   xml.send("mid="+txt);
+
+
+
+
+  }
+}
+</script>
+
+<style>
+
+  input[type="text"],input[type="password"],input[type="date"]   
+  {
+      background-color: lightgoldenrodyellow;
+   width: 300px;
+   height: 40px;
+   font-size: 20px;
+    }
+    input[type="submit"],input[type="reset"],input[type="button"]   
+  {
+     width: 150px;
+     height: 40px;
+     border:3px solid black;
+     margin: 10px;
+     font-size: 20px;
+  }
+
+</style>
+
+
+</head>
+<body>
+<h1>मेरा भारत महान</h1>
+
+<form action="second.html"  method="get" enctype="multipart/form-data">
+
+<table>
+<tr> <td> Enter your name : </td> <td> 
+
+<input type="text" name="txtName" value="ram" maxlength="8" size="50" disabled readonly> 
+
+<input type="hidden" name="txtSurname" value="sharma"> 
+
+
+
+
+</td> </tr>
+<tr> <td> Enter your father name :</td> <td>  <input type="text" name="txtFname" placeholder="type father name here"> </td> </tr>
+
+<tr> <td>Enter your password </td> <td> <input type="password" name="txtPass">  </td> </tr>
+
+<tr> <td> Enter Email ID :</td> <td>  <input type="text" name="txtEmail" id="txtEmail" placeholder="pk@yahoo.com" onchange="checkEmail();"> <span id="errEmail"> </span> </td> </tr>
+
+<tr> <td>Choose your gender </td> <td>  
+<input type="radio" name="rdGender" value="m" checked> Male 
+<input type="radio" name="rdGender" value="f"> Female 
+
+</td> </tr>
+
+
+<tr> <td>Choose your hobbies :</td> <td> 
+<input type="checkbox" name="chkHobby" value="cri"> Cricket 
+<input type="checkbox" name="chkHobby" value="foot" checked> Football
+<input type="checkbox" name="chkHobby" value="bad" checked> Badminton
+<input type="checkbox" name="chkHobby" value="music"> Music
+
+ </td> </tr>
+
+
+<tr> <td> Choose any course</td> <td>  
+<select name="cmbCourse">
+<option value="1"> Java </option>
+<option value="2"> C lang </option>
+<option> C++ </option>
+<option selected> Dot Net </option>
+<option> PHP </option>
+
+</select>
+
+
+</td> </tr>
+
+<tr> <td> Chose Your photo</td> <td> 
+<input type="file" name="flPhoto"> 
+ </td> </tr>
+
+
+<tr> <td>Choose your DOB </td> <td>  <input type="date" name="dtDob"> </td> </tr>
+
+<tr> <td>Enter your address </td> <td> 
+<textarea name="txtAddress" rows="5" cols="40">Ganj Para, 
+near shani mandir,
+durg</textarea>
+
+  </td> </tr>
+
+
+<tr> <td> </td> <td>  </td> </tr>
+
+<tr> <td> <input type="submit" value="save data"> </td> <td>  <input type="reset" value="cancel"> 
+
+<input type="button" value="delete data">
+
+</td> </tr>
+
+</table>
+
+
+
+
+
+</form>
+
+
+</body>
+</html>

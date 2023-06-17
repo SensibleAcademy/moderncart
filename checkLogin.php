@@ -1,4 +1,11 @@
-<?php @session_start();
+<?php 
+
+
+
+
+
+
+@session_start();
 $a=$_REQUEST['txtUser'];
 $b=$_REQUEST['txtPassword'];
 include("dbconnect.php");

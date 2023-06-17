@@ -1,0 +1,53 @@
+<html>
+    <head>
+<style>
+#myDiv 
+{
+    border:3px solid black;
+    min-height: 300px;
+    margin: 20px;
+    padding: 10px;
+}
+</style>    
+<script>
+ function display()
+ {
+     var x='{"name":"ram kumar","email":"ramesh@gmail.com","mobile":"12345678","course":"java","fees":50000}';
+     var dv=document.getElementById("myDiv");
+     /*
+     for(i=0;i<=x.length-1;i++)
+     dv.innerHTML+= x[i] + " , ";
+     */
+
+     
+     var y=JSON.parse(x);
+ 
+  alert(y["mobile"]);
+     for (const x in y) 
+     {
+          dv.innerHTML += x + "->" + y[x] + ", ";
+
+        }
+
+     //y.array.forEach(myfun); 
+     //x.forEach(myfun);
+ }
+
+ function myfun(a,b)
+ {
+    alert(a + "===="+ b );
+ }
+
+
+</script>    
+    </head>    
+    <body>
+
+        <input type="button" value="test" onclick="display();">
+
+        <div id="myDiv">
+
+        </div>
+
+    </body>
+ </html>       

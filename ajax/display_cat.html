@@ -1,0 +1,45 @@
+<html>
+    <head>
+<script>
+function loadData()
+{
+    var xml=new XMLHttpRequest;
+   xml.onreadystatechange=function()
+   {
+     if(xml.readyState==4 && xml.status==200)
+     {
+         tab=document.getElementById("myTable");
+         data=JSON.parse(xml.responseText);
+
+         var str="";
+         for(i in data)
+         {
+            str= str + "<tr>";
+            str=str + "<td>"+ data[i].cat_id + "</td>";
+            str=str + "<td>"+ data[i].cat_name + "</td>";
+            str=str + "<td>"+ data[i].cat_type + "</td>";
+
+            str=str + "</tr>";
+         }
+         alert(str);
+
+         tab.innerHTML=str;
+
+     }
+   }
+
+
+    xml.open("GET","getdata.php",true);
+    xml.send();
+} 
+</script>    
+</head>
+        <body>
+
+    <input type="button" onclick="loadData();" value="Get DATA">
+    <table border="1" id="myTable">
+     <tr><th>Cat Id </th><th>Cat Name</th> <th>Type</th></tr>
+    </table>    
+
+</body>    
+</html>
