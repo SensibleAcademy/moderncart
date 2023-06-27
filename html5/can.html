@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+
+var can,ctx;
+var cnt=0;
+var tm;
+var r,g,b,col;
+function drawCircle()
+{
+
+    r=Math.ceil( Math.random() * 255);
+    g=Math.ceil( Math.random() * 255);
+    b=Math.ceil( Math.random() * 255);
+    col=r.toString(16)+g.toString(16)+b.toString(16);
+    console.log(col);
+
+   
+    cnt++;
+   if(cnt<10)
+   {
+     ctx.beginPath();
+    ctx.arc(150,150,25 + cnt*10,0,Math.PI * 2,1);
+    ctx.strokeStyle ="#"+col;
+    ctx.stroke();
+     ctx.closePath();
+   }
+   else 
+     {
+         clearInterval(tm);
+     }
+}
+
+function drawCan()
+            {
+ can=document.getElementById("mycan");
+ ctx = can.getContext('2d');
+
+                /*
+                ctx.rect(40,40,300,100);
+
+                ctx.strokeStyle="blue";  
+                ctx.stroke();
+            
+      
+                 ctx.fillStyle="#123456";
+                ctx.fillRect(40,40,300,100);
+
+                */  
+
+                
+                //ctx.fill();
+                   tm=setInterval(function(){drawCircle();},1000);    
+            }
+                </script>
+            
+    </head>    
+    <body>
+    <h1>Sensible</h1>
+    <input type="button" value="draw some image" onclick="drawCan();"> <br><br>
+
+    <canvas id="mycan" width="800" height="400" style="border: 1px solid black;">
+
+    </canvas>
+
+    </body>
+</html>

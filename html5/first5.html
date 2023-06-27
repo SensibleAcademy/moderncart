@@ -2,7 +2,17 @@
 <html>
 <head>
   <link href=""  rel="stylesheet">
-  <script > </script>
+  <script > 
+  function getTotal()
+  {
+     var x=parseInt(document.f1.num1.value);
+     var y=parseInt(document.f1.rng1.value);
+     z=x+y;
+
+     document.f1.myTotal.value=z;
+
+  }
+  </script>
 </head>    
 
 <body>
@@ -17,13 +27,50 @@
 
 
   <br><br>
-<form method="get" action="second.html">
-  <input type="number" min="10" max="50" step="3"><BR>
+<form method="get" action="second.html" name="f1" id="myform" >
 
-    <input type="date"><BR>   
+  <label>Enter your answer </label>  
+  <input type="text" required pattern="[A-Za-z]{1}-[0-9]{2}" placeholder="h-23"><br>
+
+ <label>Enter first number </label>  
+
+
+ <input type="text"  name="num1" onchange="getTotal();" data-surname="jain" data-area="bhilai" required><BR>
+
+  <!--
+  Course <select name="cmbCourse">
+             <option>Java</option>
+             <option>C</option>
+             <option>Python</option>
+             <option>Android</option>
+             <option>React</option>
+         </select>
+
+         -->
+      choose course <input list="courseData">
+         <datalist id="courseData">
+         <option value="1">java</option>
+         <option value="python"></option>
+         <option value="android"></option>
+         <option value="C"></option>
+         <option value="php"></option>
+         </datalist> 
+
+
+  <br>
+
+
+  <input type="submit" value="Ok1" tabindex="1" formaction="mumbai.php" formmethod="get">
+  <input type="submit" value="Ok2" tabindex="1" formaction="delhi.php" formmethod="post" formenctype="multipart/form-data" formnovalidate>
+  <input type="submit" value="Ok3" tabindex="1" formaction="kolkata.php" formenctype="application/x-www-form-urlencoded">
+
+
+<br>
+    <input type="date" name="dtDOJ"><BR>   
+    
       <input type="month"><BR>   
         <input type="week"><BR>      
-          <input type="range" min="0" max="10" value="8"><BR>      
+          <label>choose second number </label>   <input type="range" min="0" max="10" value="8" id="rng1" name="rng1" onchange="getTotal();" form="myform"><BR>      
             <input type="color"><BR>   
 
               <input type="search"><BR>      
@@ -32,6 +79,8 @@
                   <input type="url"><BR>   
   <input type="tel">
 
+  <br> Total is <output name="myTotal"></output> <br>
+
 
 
 
@@ -39,11 +88,10 @@
    <label for="txtName" accesskey="n">Enter your <u>n</u>ame </label> <input type="text" name="txtName"  autocomplete="off" id="txtName" tabindex="0" >  <br><br>
 
    <label for="txtEmail">Enter your Email </label> <input type="text" name="txtEmail"  autocomplete="off" id="txtEmail" tabindex="3">  <br><br>
-   <label for="txtAddress">Enter your address </label> <input type="text" name="txtAddress"  autocomplete="off" id="txtAddress" tabindex="2">  <br>
+   <label for="txtAddress">Enter your address </label> <input type="text" name="txtAddress" form="myform"  autocomplete="off" id="txtAddress" tabindex="2">  <br>
   
-   <input type="submit" value="Ok" tabindex="1">
-
-</form>  
+  </form> 
+    
 <br><br>
 
 <div id="myDiv1" style="width: 400px;" hidden>
