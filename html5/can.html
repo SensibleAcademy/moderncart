@@ -7,6 +7,7 @@ var can,ctx;
 var cnt=0;
 var tm;
 var r,g,b,col;
+var oldrd,newrd=0;
 function drawCircle()
 {
 
@@ -16,20 +17,35 @@ function drawCircle()
     col=r.toString(16)+g.toString(16)+b.toString(16);
     console.log(col);
 
-   
+     ctx.arc(150,150,100,0,Math.PI * 2,1);
+     ctx.stroke();
+
+    /*
+    oldrd=newrd;
     cnt++;
+    newrd=25+cnt*10;
    if(cnt<10)
    {
      ctx.beginPath();
-    ctx.arc(150,150,25 + cnt*10,0,Math.PI * 2,1);
+    ctx.arc(150,150,25 + newrd,0,Math.PI * 2,1);
     ctx.strokeStyle ="#"+col;
     ctx.stroke();
-     ctx.closePath();
+    ctx.closePath();
+
+    ctx.beginPath();
+
+    ctx.arc(150,150,25 + oldrd,0,Math.PI * 2,1);
+    ctx.strokeStyle ="white";
+    ctx.stroke();
+ 
+    ctx.closePath();
    }
    else 
      {
          clearInterval(tm);
+         ctx.clearRect(150,150,100,100);
      }
+     */
 }
 
 function drawCan()
@@ -51,14 +67,70 @@ function drawCan()
 
                 
                 //ctx.fill();
-                   tm=setInterval(function(){drawCircle();},1000);    
+                drawCircle();
+//                   tm=setInterval(function(){drawCircle();},1000);    
             }
+            function drawGrad()
+            {
+                can=document.getElementById("mycan");
+                ctx = can.getContext('2d'); 
+                
+                ctx.font="Bold 40px Arial";
+                ctx.textAlign="center";
+
+                //ctx.strokeText("Sensible",100,100);
+                
+                ctx.fillStyle="blue";
+                ctx.fillText("Sensible Academy Welcome you",can.width/2,can.height/2);
+                
+                /*
+                var grd=ctx.createRadialGradient(400,200,50,400,200,250);
+    
+                grd.addColorStop(0,"red");
+                
+                grd.addColorStop(0.3,"green");
+                grd.addColorStop(0.6,"yellow");
+                grd.addColorStop(0.8,"white");
+                
+        grd.addColorStop(1,"blue");
+        ctx.fillStyle=grd;
+    
+        
+                ctx.beginPath();          
+                ctx.arc(500,200,100,0,2*Math.PI);
+                ctx.fill();
+                ctx.closePath();
+                
+
+   ctx.fillRect(0,0,800,400);
+   */
+
+            }
+        function drawCar()
+        {
+            can=document.getElementById("mycan");
+                ctx = can.getContext('2d'); 
+             var car=document.getElementById("mycar");
+             ctx.drawImage(car,600,200,50,50);   
+             ctx.clearRect(0,0,800,400);
+             ctx.drawImage(car,400,200,50,50);   
+
+
+        }
+
+                
                 </script>
+
             
     </head>    
     <body>
+        <img src="./car.png" width="50" height="50" id="mycar">
     <h1>Sensible</h1>
     <input type="button" value="draw some image" onclick="drawCan();"> <br><br>
+
+    <input type="button" value="add colours" onclick="drawGrad();"> <br><br>
+
+    <input type="button" value="add car" onclick="drawCar();"> <br><br>
 
     <canvas id="mycan" width="800" height="400" style="border: 1px solid black;">
 
